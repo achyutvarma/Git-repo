@@ -1,0 +1,17 @@
+git ls-files --stage
+ 
+Remove submodule references:
+git rm --cached task-assesment-aws
+ 
+Delete the .git metadata inside each submodule directory (if present):
+rm -rf task-assesment-aws/.git
+
+ 
+Add the folders back as normal directories:
+git add task-assesment-aws
+ 
+Commit and push the changes:
+git commit -m "Converted submodules to normal folders"
+git push origin <branch-name>
+
+Note: Make sure you add and commit in same branch to which you want to push other wise you might face same error.
