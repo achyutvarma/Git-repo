@@ -1,4 +1,11 @@
 cd /path/to/your/localfile
+Set your identity
+You must set this before committing to identify yourself:
+
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+This information appears in your commit history and helps GitHub associate commits with your account.
+
 git init             --> Make sure that you are in same branch when you add and commit to avoid errors.
 git status
 git remote add origin https://github.com/avadaequare/testlambda.git --> make sure you have a repo created in git hub.
