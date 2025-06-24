@@ -1,0 +1,3 @@
+To prevent sensitive information such as access keys or credentials from being exposed in a public GitHub repository, you should create a .gitignore file in your local repository and specify 
+confidential files (e.g., .env) within it. This ensures that Git excludes those files from version control, thereby protecting your credentials from being accidentally committed and pushed to GitHub.
+
