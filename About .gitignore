@@ -2,3 +2,4 @@ To prevent sensitive information such as access keys or credentials from being e
 file in your local repository and specify confidential files (e.g., .env) within it. This ensures that Git excludes those files from version control, 
 thereby protecting your credentials from being accidentally committed and pushed to GitHub.
 
+ChatGPT Image Jun 24, 2025, 03_49_06 PM.png
