@@ -13,3 +13,11 @@ It adds all modified and deleted files that are already being tracked by Git, an
 It does not stage new (untracked) files. For that, you still need to use:
 
 git add newfile.txt
+
+Ex:
+git commit -am "Fix bug in login flow"
+This:
+
+Automatically stages changes in tracked files.
+
+Commits those changes with the message "Fix bug in login flow".
