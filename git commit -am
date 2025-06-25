@@ -1,0 +1,15 @@
+git commit: The command used to create a new commit (a snapshot of changes) in your Git repository.
+
+-a: Automatically stages tracked files that have been modified or deleted (but not new untracked files).
+
+-m "message": Specifies the commit message directly in the command.
+
+git commit -am "message"
+
+# What it does:
+It adds all modified and deleted files that are already being tracked by Git, and then commits them with the provided message.
+
+# What it does NOT do:
+It does not stage new (untracked) files. For that, you still need to use:
+
+git add newfile.txt
