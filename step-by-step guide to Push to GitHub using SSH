@@ -1,6 +1,5 @@
 STEP 1: Check for existing SSH key
 Open a terminal and run:
-
 ls ~/.ssh
 Look for files like id_rsa and id_rsa.pub (or id_ed25519 and id_ed25519.pub).
 If found, you already have an SSH key — you can skip to Step 3.
@@ -10,30 +9,23 @@ If no SSH key exists, create one:
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
 If you’re on an older system that doesn’t support Ed25519:
-
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
 When prompted:
-
 Save to default location (~/.ssh/id_ed25519)
-
 Enter a passphrase (recommended but optional)
 
 📋 STEP 3: Add SSH key to ssh-agent
 Start the SSH agent:
-
-
 eval "$(ssh-agent -s)"
 Add your key:
-
-
 ssh-add ~/.ssh/id_ed25519
+
 🌐 STEP 4: Add SSH key to your GitHub account
 Copy the public key:
-
-
 cat ~/.ssh/id_ed25519.pub
-Copy the output (starts with ssh-ed25519...)
 
+Copy the output (starts with ssh-ed25519...)
 # Go to GitHub → Settings → SSH and GPG keys → New SSH key
 
 Title: My Laptop Key (or any label)
@@ -46,26 +38,20 @@ Paste the public key
 
 ssh -T git@github.com
 If successful, you’ll see:
-
-
 Hi username! You've successfully authenticated...
+
 📂 STEP 6: Clone or set your Git remote to SSH
 If cloning a new repo:
-
-
 git clone git@github.com:username/repo-name.git
+
 If you already cloned using HTTPS, switch to SSH:
-
-
 git remote set-url origin git@github.com:username/repo-name.git
+
 Check it:
-
-
 git remote -v
+
 🚀 STEP 7: Push using SSH
 Now you can push without entering username/token every time:
-
-
 git add .
 git commit -m "your message"
 git push origin main
