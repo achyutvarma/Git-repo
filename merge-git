@@ -8,20 +8,20 @@ If you already have it cloned, just cd into the repo.
 
 2. Fetch all branches and latest change
 git fetch --all
+
 3. Switch to the target branch (e.g., main)
 git checkout main
+
 4. Make sure your target branch is up to date
 git pull origin main
+
 5. Merge the source branch (e.g., feature-branch) into target
 git merge feature-branch
 If there's no conflict: ✅ Merge is successful.
-
 If there is a conflict, Git will show the conflicted files. You need to:
 
 Open and manually edit the conflicting files
-
 Use git add <file> for each resolved file
-
 Run git commit to complete the merge
 
 6. Push the merged changes to GitHub
