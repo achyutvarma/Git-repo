@@ -1,0 +1,58 @@
+ 1. Git Merge
+🔍 Concept:
+Merges two branches together while preserving all history. Creates a merge commit.
+
+📘 Example:
+You have:
+main:    A---B---C
+feature:         \---D---E
+
+Now run:
+git checkout main
+git merge feature
+
+After merge:
+main:    A---B---C-------M
+                      /   \
+         feature:    D-----E
+✅ Merge commit M joins both histories.
+
+🔄 2. Git Rebase
+🔍 Concept:
+Moves your feature branch commits and replays them on top of another branch.
+Rewrites history (changes commit hashes).
+
+📘 Example:
+You have:
+
+mathematica
+
+main:    A---B---C
+feature:         \---D---E
+Now run:
+
+
+git checkout feature
+git rebase main
+After rebase:
+
+
+main:    A---B---C
+                 \
+feature (new):     D'---E'
+D' and E' are new commits — rewritten versions of D and E.
+
+↩️ 3. Git Revert
+🔍 Concept:
+Creates a new commit that undoes a previous one, without rewriting history.
+
+📘 Example:
+You have:
+A---B---C---D---E
+
+If C introduced a bug, run:
+git revert C
+
+Git creates a new commit F that reverses what C did.
+
+A---B---C---D---E---F (undo of C)
